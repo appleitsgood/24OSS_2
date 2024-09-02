@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Billing address</h3>
+    <form action="">
+        <label for="fname">First name</label><br>
+        <input type="text" id="fname" name="fname" placeholder="John"><br>
+        
+        <label for="lname">Last name</label>
+        <input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
+        
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username" placeholder="Username"><br>
+        
+        <label for="username">Email <small>(Optional)</small> </label><br>
+        <input type="text" id="email" name="email" placeholder="you@example.com"><br>
+        
+        <label for="address">Address</label><br>
+        <input type="text" id="address" name="address" placeholder="1234 Main St"><br>
+        
+        <label for="address">Address 2 <small>(Optional)</small></label><br>
+        <input type="text" id="address" name="address" placeholder="Apartment or suite"><br>
+        
+        <label for="Country">Country</label><br>
+        <select id="country" required>
+            <option value="">Choose...</option>
+            <option value="USA">United States</option>
+        </select><br>
+
+        <label for="State">State</label><br>
+        <select id="state" required>
+            <option value="">Choose...</option>
+            <option value="USA">California</option>
+        </select><br>
+        
+        <label for="zip">Zip</label><br>
+        <input type="text" id="zip" name="zip"><br><br>
+
+        <input type="checkbox" id="condition1" name="condition1" >
+        <label for="condition1">Shipping address is the same as my billing address</label><br>
+        <input type="checkbox" id="condition2" name="condition2" >
+        <label for="condition2">Save this information for next time</label><br>
+
+        <h3>Payment</h3>
+        <input type="radio" id="credit" name="payment">
+        <label for="card">Credit card</label><br>
+        <input type="radio" id="debit" name="payment">
+        <label for="card">Debit card</label><br>
+        <input type="radio" id="credit" name="payment">
+        <label for="card">Paypal</label><br>
+
+        <label for="nameOnCard">Name on card</label><br>
+        <input type="text" id="nameOnCard" name="nameOnCard">
+        <small>Full name displayed on card</small>
+        <input type="submit" value="Continue to checkout">
+
+
+    </form>
+</body>
+
+</html>
