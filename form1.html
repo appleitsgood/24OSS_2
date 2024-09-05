@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <h2>Checkout form</h2>
+    <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
     <h3>Billing address</h3>
     <form action="">
         <label for="fname">First name</label><br>
@@ -57,12 +59,36 @@
         <label for="card">Paypal</label><br>
 
         <label for="nameOnCard">Name on card</label><br>
-        <input type="text" id="nameOnCard" name="nameOnCard">
-        <small>Full name displayed on card</small>
+        <input type="text" id="nameOnCard" name="nameOnCard"><br>
+        <small>Full name displayed on card</small><br>
+        
+        <label for="cardnumber">Card number</label><br>
+        <input type="text" id="cardnumber" name="cardnumber">
+
+        
         <input type="submit" value="Continue to checkout">
 
 
     </form>
+
+    <h3> Your cart </h3>
+    <ul>
+        <li>Item 1 - $10</li>
+        <li>Item 2 - $15</li>
+        <li>Item 3 - $20</li>
+        <li>Promo code </li>
+        <li>Total(USD) - $20</li>
+    </ul>
+
+    <input type="text" name="promo" id="promo"><button type="submit"S>redeem</button>
 </body>
+<footer>
+    © 2017–2022 Company Name
+    <nav>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+    </nav>
+</footer>
 
 </html>
