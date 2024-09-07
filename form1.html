@@ -6,81 +6,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <h2>Checkout form</h2>
-    <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-    <h3>Billing address</h3>
-    <form action="">
-        <label for="fname">First name</label><br>
-        <input type="text" id="fname" name="fname" placeholder="John"><br>
-        
-        <label for="lname">Last name</label>
-        <input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
-        
-        <label for="username">Username</label><br>
-        <input type="text" id="username" name="username" placeholder="Username"><br>
-        
-        <label for="username">Email <small>(Optional)</small> </label><br>
-        <input type="text" id="email" name="email" placeholder="you@example.com"><br>
-        
-        <label for="address">Address</label><br>
-        <input type="text" id="address" name="address" placeholder="1234 Main St"><br>
-        
-        <label for="address">Address 2 <small>(Optional)</small></label><br>
-        <input type="text" id="address" name="address" placeholder="Apartment or suite"><br>
-        
-        <label for="Country">Country</label><br>
-        <select id="country" required>
-            <option value="">Choose...</option>
-            <option value="USA">United States</option>
-        </select><br>
+    <div>
+        <img src="/images/bootstrap-logo.svg" width="72" height="57">
+        <h2>Checkout form</h2>
+        <p>
+            Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a
+            validation state that can be triggered by attempting to submit the form without completing it.
+        </p>
+    </div>
+    <div>
+        <div>
+            <h3> Your cart </h3>
+            <ul>
+                <li>
+                    <div>
+                        <h6>Product Name</h6>
+                        <small>Brief description</small>
+                    </div>
+                    <span>$10</span>
+                </li>
+                <li>
+                    <div>
+                        <h6>Second Product</h6>
+                        <small>Brief description</small>
+                    </div>
+                    <span>$8</span>
+                </li>
+                <li>
+                    <div>
+                        <h6>Third Item</h6>
+                        <small>Brief description</small>
+                    </div>
+                    <span>$5</span>
+                </li>
+                <li>
+                    <div>
+                        <h6>Promo code</h6>
+                        <small>EXAMPLECODE</small>
+                    </div>
+                    <span>-$5</span>
+                </li>
+                <li>
+                    <span>Total (USD)</span>
+                    <strong>20$</strong>
+                </li>
+            </ul>
 
-        <label for="State">State</label><br>
-        <select id="state" required>
-            <option value="">Choose...</option>
-            <option value="USA">California</option>
-        </select><br>
-        
-        <label for="zip">Zip</label><br>
-        <input type="text" id="zip" name="zip"><br><br>
+            <input type="text" name="promo" id="promo" placeholder="Promo code"><button type="submit" S>redeem</button>
+        </div>
+        <div>
+            <h3>Billing address</h3>
+            <form action="">
+                <div>
+                    <label for="fname">First name</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="John"><br>
+                </div>
+                <div>
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
+                </div>
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" placeholder="Username"><br>
+                <div>
+                    <label for="username">Email <small>(Optional)</small> </label><br>
+                    <input type="text" id="email" name="email" placeholder="you@example.com"><br>
+                </div>
+                <div>
+                    <label for="address">Address</label><br>
+                    <input type="text" id="address" name="address" placeholder="1234 Main St"><br>
+                </div>
+                <div>
+                    <label for="address">Address 2 <small>(Optional)</small></label><br>
+                    <input type="text" id="address" name="address" placeholder="Apartment or suite"><br>
+                </div>
+                <div>
+                    <label for="Country">Country</label><br>
+                    <select id="country" required>
+                        <option value="">Choose...</option>
+                        <option value="USA">United States</option>
+                    </select><br>
+                </div>
+                <div>
+                    <label for="State">State</label><br>
+                    <select id="state" required>
+                        <option value="">Choose...</option>
+                        <option value="USA">California</option>
+                    </select><br>
+                </div>
+                <div>
+                    <label for="zip">Zip</label><br>
+                    <input type="text" id="zip" name="zip"><br><br>
+                </div>
+                <hr>
+                <div>
+                    <input type="checkbox" id="condition1" name="condition1">
+                    <label for="condition1">Shipping address is the same as my billing address</label><br>
+                </div>
 
-        <input type="checkbox" id="condition1" name="condition1" >
-        <label for="condition1">Shipping address is the same as my billing address</label><br>
-        <input type="checkbox" id="condition2" name="condition2" >
-        <label for="condition2">Save this information for next time</label><br>
-
-        <h3>Payment</h3>
-        <input type="radio" id="credit" name="payment">
-        <label for="card">Credit card</label><br>
-        <input type="radio" id="debit" name="payment">
-        <label for="card">Debit card</label><br>
-        <input type="radio" id="credit" name="payment">
-        <label for="card">Paypal</label><br>
-
-        <label for="nameOnCard">Name on card</label><br>
-        <input type="text" id="nameOnCard" name="nameOnCard"><br>
-        <small>Full name displayed on card</small><br>
-        
-        <label for="cardnumber">Card number</label><br>
-        <input type="text" id="cardnumber" name="cardnumber">
-
-        
-        <input type="submit" value="Continue to checkout">
-
-
-    </form>
-
-    <h3> Your cart </h3>
-    <ul>
-        <li>Item 1 - $10</li>
-        <li>Item 2 - $15</li>
-        <li>Item 3 - $20</li>
-        <li>Promo code </li>
-        <li>Total(USD) - $20</li>
-    </ul>
-
-    <input type="text" name="promo" id="promo"><button type="submit"S>redeem</button>
+                <div>
+                    <input type="checkbox" id="condition2" name="condition2">
+                    <label for="condition2">Save this information for next time</label><br>
+                </div>
+                <hr>
+                <h4>Payment</h4>
+                <div>
+                    <input type="radio" id="credit" name="payment">
+                    <label for="card">Credit card</label><br>
+                    <input type="radio" id="debit" name="payment">
+                    <label for="card">Debit card</label><br>
+                    <input type="radio" id="credit" name="payment">
+                    <label for="card">Paypal</label><br>
+                </div>
+                <div>
+                    <div>
+                        <label for="nameOnCard">Name on card</label><br>
+                        <input type="text" id="nameOnCard" name="nameOnCard"><br>
+                        <small>Full name displayed on card</small><br>
+                    </div>
+                    <div>
+                        <label for="cardNum">Card number</label><br>
+                        <input type="text" id="cardNum" name="cardNum">
+                    </div>
+                    <div>
+                        <label for="cardExp">Expiration</label><br>
+                        <input type="text" id="cardExp" name="cardExp">
+                        <small>Expiration date required</small>
+                    </div>
+                    <div>
+                        <label for="cardCVV">CVV</label><br>
+                        <input type="text" id="cardCVV" name="cardExp">
+                        <small>Serequired</small>
+                    </div>
+                </div>
+                <hr>
+                <button type="submit">Continue to checkout</button>
+            </form>
+        </div>
+    </div>
 </body>
 <footer>
     © 2017–2022 Company Name
