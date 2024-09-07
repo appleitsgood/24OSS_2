@@ -61,49 +61,64 @@
                 <div>
                     <label for="fname">First name</label><br>
                     <input type="text" id="fname" name="fname" placeholder="John"><br>
+                    <small>Valid first name is required</small>
                 </div>
                 <div>
                     <label for="lname">Last name</label>
-                    <input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
+                    <input type="text" id="lname" name="lname" placeholder="Doe"><br>
+                    <small>Valid last name is required</small>
                 </div>
                 <label for="username">Username</label><br>
                 <input type="text" id="username" name="username" placeholder="Username"><br>
                 <div>
                     <label for="username">Email <small>(Optional)</small> </label><br>
                     <input type="text" id="email" name="email" placeholder="you@example.com"><br>
+                    <small>Please enter a valid email addresss for shippping updates.</small>
                 </div>
                 <div>
                     <label for="address">Address</label><br>
                     <input type="text" id="address" name="address" placeholder="1234 Main St"><br>
+                    <small>Please enter your shipping address.</small>
                 </div>
                 <div>
                     <label for="address">Address 2 <small>(Optional)</small></label><br>
                     <input type="text" id="address" name="address" placeholder="Apartment or suite"><br>
                 </div>
                 <div>
-                    <label for="Country">Country</label><br>
+                    <label for="country">Country</label><br>
                     <select id="country" required>
                         <option value="">Choose...</option>
                         <option value="USA">United States</option>
                     </select><br>
+                    <small>Please select a valid country.</small>
                 </div>
                 <div>
-                    <label for="State">State</label><br>
+                    <label for="state">State</label><br>
                     <select id="state" required>
                         <option value="">Choose...</option>
                         <option value="USA">California</option>
                     </select><br>
+                    <small>Please provide a valid state.</small>
                 </div>
                 <div>
                     <label for="zip">Zip</label><br>
                     <input type="text" id="zip" name="zip"><br><br>
+                    <small>Zip code required.</small>
+                </div>
+                <div>
+                    <label for="date">Shipping Date</label><br>
+                    <input type="date" id="ShippingDate" name="ShippingDate">
+                </div>
+                <div>
+                    <label for="message">Message to deliverer</label><br>
+                    <textarea id="message" name="message" rows="8" cols="30"></textarea>
                 </div>
                 <hr>
                 <div>
                     <input type="checkbox" id="condition1" name="condition1">
                     <label for="condition1">Shipping address is the same as my billing address</label><br>
                 </div>
-
+                
                 <div>
                     <input type="checkbox" id="condition2" name="condition2">
                     <label for="condition2">Save this information for next time</label><br>
@@ -121,12 +136,14 @@
                 <div>
                     <div>
                         <label for="nameOnCard">Name on card</label><br>
-                        <input type="text" id="nameOnCard" name="nameOnCard"><br>
+                        <input type="text" id="nameOnCard" name="nameOnCard">
                         <small>Full name displayed on card</small><br>
+                        <small>Name on card is required</small>
                     </div>
                     <div>
                         <label for="cardNum">Card number</label><br>
                         <input type="text" id="cardNum" name="cardNum">
+                        <small>Credit card number is required</small>
                     </div>
                     <div>
                         <label for="cardExp">Expiration</label><br>
@@ -136,7 +153,7 @@
                     <div>
                         <label for="cardCVV">CVV</label><br>
                         <input type="text" id="cardCVV" name="cardExp">
-                        <small>Serequired</small>
+                        <small>Security code required</small>
                     </div>
                 </div>
                 <hr>
