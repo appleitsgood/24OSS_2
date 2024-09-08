@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
+    <title>Document</title>
+    <style>
+        body {
+            display: block;
+            font-family: 'Inter';
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            margin: 48px 0px;
+            padding: 48px 0px 0px;
+            width: 100%;
+            color: black;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .footer-text {
+            color: gray;
+        }
+
+        .container {
+            display: block;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 0px 12px;
+            max-width: 960px;
+        }
+
+
+        .intro {
+            text-align: center;
+            font-weight: 300;
+            padding: 48px 0px;
+        }
+
+        .intro-description {
+            font-size: 20px;
+            font-weight: 100 lighter;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+
+
+        .cart {
+            width: 30%;
+            margin: 48px 0px 0px;
+            padding: 0px 24px;
+        }
+
+        .cart-ul {
+            list-style-type: none;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 0;
+            background-color: white;
+        }
+
+        .cart-li-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 12px;
+        }
+
+        .cart-count {
+            display: flex;
+            align-items: center;
+            padding: 0px 12px;
+            background-color: #0d6efd;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 15px;
+            margin-bottom: 12px;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-li-item:nth-child(4) {
+            background-color: #e2e2e2;
+        }
+
+        .cart-li-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-h6 {
+            margin: 0px;
+            font-weight: 500;
+            font-size: 17px;
+        }
+
+        .cart-small {
+            font-size: 13px;
+            color: #6c757d;
+        }
+
+        .item-price {
+            font-weight: 500;
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+        .total {
+            font-weight: 500;
+            font-size: 18px;
+            color: #6c757d;
+            margin-top: 12px;
+        }
+
+        .promo-card {
+            margin-top: 12px;
+            padding: 12px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .promo-input {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .promo-code {
+            padding: 16px;
+            width: 70%;
+            border: none;
+            border-radius: 10px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .promo-code:focus {
+            border-color: #0d6efd;
+            outline: none;
+            box-shadow: 0 0 10px 0 rgba(35, 98, 166, 0.9);
+        }
+
+        .redeem {
+            background-color: #4e4e4e;
+            color: white;
+            display: flex;
+            justify-content: center;
+            border: none;
+            min-width: 30%;
+            padding: 16px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-weight: 500;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .redeem:hover {
+            background-color: #343a40;
+        }
+
+        .billing {
+            padding: 0px 10px;
+            width: 70%;
+            max-width: 100%;
+        }
+
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .name-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .first-name,
+        .last-name {
+            width: 48%;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        hr {
+            margin: 24px 0px;
+        }
+
+        .first-check,
+        .second-check {
+            padding: 2px 0px;
+        }
+
+        .credit-radio,
+        .debit-radio,
+        .paypal-radio {
+            margin-bottom: 10px;
+        }
+
+        .country-state-zip-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+
+        .col {
+            margin-top: 20px;
+        }
+
+        .card-info-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .full-width {
+            width: 48%;
+            margin-bottom: 12px;
+        }
+
+        .row {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .half-width {
+            width: 18%;
+            margin-right: 4%;
+        }
+
+        .half-width:last-child {
+            margin-right: 0;
+        }
+
+        .checkout {
+            background-color: #0d6efd;
+            color: white;
+            width: 100%;
+            height: 20%;
+            font-size: 23px;
+            border-radius: 8px;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .checkout:hover {
+            background-color: #0c5e9e;
+        }
+
+        .email-text {
+            background-color: #cecece;
+            padding: 10.5px;
+            width: 10%;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .username {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+
+        .username-wrapper {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        .email-text {
+            width: 5%;
+            background-color: #cecece;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .username-input {
+            margin: -1px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .green {
+            color: #28a745;
+        }
+
+        .needs-validation small {
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro">
+            <img src="/images/bootstrap-logo.svg" width="72" height="57">
+            <h2>Checkout form</h2>
+            <p class="intro-description">
+                Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a
+                validation state that can be triggered by attempting to submit the form without completing it.
+            </p>
+        </div>
+        <div class="main">
+            <div class="cart">
+                <div class="cart-header">
+                    <h3> Your cart </h3>
+                    <span class="cart-count">3</span>
+                </div>
+                <ul class="cart-ul">
+                    <li class="cart-li-item">
+                        <div>
+                            <h6 class="cart-h6">Product Name</h6>
+                            <small class="cart-small">Brief description</small>
+                        </div>
+                        <span class="item-price">$10</span>
+                    </li>
+                    <li class="cart-li-item">
+                        <div>
+                            <h6 class="cart-h6">Second Product</h6>
+                            <small class="cart-small">Brief description</small>
+                        </div>
+                        <span class="item-price">$8</span>
+                    </li>
+                    <li class="cart-li-item">
+                        <div>
+                            <h6 class="cart-h6">Third Item</h6>
+                            <small class="cart-small">Brief description</small>
+                        </div>
+                        <span class="item-price">$5</span>
+                    </li>
+                    <li class="cart-li-item">
+                        <div>
+                            <h6 class="cart-h6 green ">Promo code</h6>
+                            <small class="cart-small">EXAMPLECODE</small>
+                        </div>
+                        <span>-$5</span>
+                    </li>
+                    <li class="cart-li-item">
+                        <span>Total (USD)</span>
+                        <strong>20$</strong>
+                    </li>
+                </ul>
+                <div class="promo-card">
+                    <div class="promo-input">
+                        <input class="promo-code" type="text" name="promo" id="promo" placeholder="Promo code is HGU">
+                        <button class="redeem" id="redeemer">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div class="billing">
+                <h3>Billing address</h3>
+
+                <form id="checkoutForm" method="post" class="needs-validation">
+                    <div class="name-container">
+                        <div class="first-name">
+                            <label for="fname">First name</label><br>
+                            <input class="form-control" type="text" id="fname" name="fname" placeholder="John">
+                            <small>Valid first name is required</small>
+                        </div>
+                        <div class="last-name">
+                            <label for="lname">Last name</label>
+                            <input class="form-control" type="text" id="lname" name="lname" placeholder="Doe">
+                            <small>Valid last name is required</small>
+                        </div>
+                    </div>
+                    <div class="col username">
+                        <label class="username-title" for="username">Username</label><br>
+                        <div class="username-wrapper">
+                            <span class="email-text">@</span>
+                            <input class="form-control username-input" type="text" id="username" name="username"
+                                placeholder="Username">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label for="email">Email <small>(Optional)</small> </label><br>
+                        <input class="form-control" type="email" id="email" name="email" placeholder="you@example.com">
+                        <small>Please enter a valid email addresss for shippping updates.</small>
+                    </div>
+                    <div>
+                        <label for="address1">Address</label><br>
+                        <input class="form-control" type="text" id="address1" name="address1"
+                            placeholder="1234 Main St">
+                        <small>Please enter your shipping address.</small>
+                    </div>
+                    <div class="col">
+                        <label for="address2">Address 2 <small>(Optional)</small></label><br>
+                        <input class="form-control" type="text" id="address2" name="address2"
+                            placeholder="Apartment or suite"><br>
+                    </div>
+                    <div class="country-state-zip-container">
+                        <div>
+                            <label for="country">Country</label><br>
+                            <select class="form-control" id="country">
+                                <option value="">Choose...</option>
+                                <option value="USA">United States</option>
+                            </select>
+                            <small>Please select a valid country.</small>
+                        </div>
+                        <div>
+                            <label for="state">State</label><br>
+                            <select class="form-control" id="state">
+                                <option value="">Choose...</option>
+                                <option value="USA">California</option>
+                            </select>
+                            <small>Please provide a valid state.</small>
+                        </div>
+                        <div>
+                            <label for="zip">Zip</label><br>
+                            <input class="form-control" type="text" id="zip" name="zip">
+                            <small>Zip code required.</small>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="date">Shipping Date</label><br>
+                        <input class="form-control" type="date" id="ShippingDate" name="ShippingDate">
+                    </div>
+                    <div class="col">
+                        <label for="message">Message to deliverer</label><br>
+                        <textarea class="form-control" id="message" name="message" rows="8" cols="30"></textarea>
+                    </div>
+                    <hr>
+                    <div class="first-check">
+                        <input type="checkbox" id="condition1" name="condition1">
+                        <label for="condition1">Shipping address is the same as my billing address</label>
+                    </div>
+                    <div class="second-check">
+                        <input type="checkbox" id="condition2" name="condition2">
+                        <label for="condition2">Save this information for next time</label><br>
+                    </div>
+                    <hr>
+                    <h4>Payment</h4>
+                    <div>
+                        <input class="credit-radio" type="radio" id="credit" name="payment">
+                        <label for="card">Credit card</label><br>
+                        <input class="debit-radio" type="radio" id="debit" name="payment">
+                        <label for="card">Debit card</label><br>
+                        <input class="paypal-radio" type="radio" id="credit" name="payment">
+                        <label for="card">Paypal</label><br>
+                    </div>
+                    <div>
+                        <div class="card-info-container">
+                            <div class="col full-width">
+                                <label for="nameOnCard">Name on card</label><br>
+                                <input class="form-control" type="text" id="nameOnCard" name="nameOnCard">
+                                <small>Full name as displayed on the card</small>
+                            </div>
+                            <div class="col full-width">
+                                <label for="cardNum">Card number</label><br>
+                                <input class="form-control" type="text" id="cardNum" name="cardNum">
+                                <small>Credit card number is required</small>
+                            </div>
+                            <div class="row">
+                                <div class="col half-width">
+                                    <label for="cardExp">Expiration</label><br>
+                                    <input class="form-control" type="text" id="cardExp" name="cardExp">
+                                    <small>Expiration date required</small>
+                                </div>
+                                <div class="col half-width">
+                                    <label for="cardCVV">CVV</label><br>
+                                    <input class="form-control" type="text" id="cardCVV" name="cardCVV">
+                                    <small>Security code required</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <button class="checkout" type="submit">Continue to checkout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <span class="footer-text">© 2017–2022 Company Name</span>
+    <nav>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+    </nav>
+</footer>
+
+</html>
+<script>
+    document.getElementById("redeemer").addEventListener('click', function (event) {
+        event.preventDefault();
+        let promoCode = document.getElementById('promo').value;
+        if (promoCode === 'HGU') {
+            alert('Promo code applied successfully!');
+        } else {
+            alert('Invalid promo code. Please try again.');
+        }
+        document.getElementById('promo').value = '';
+    });
+
+    document.getElementById('checkoutForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        let isValid = true;
+        let firstInvalidField = null;
+
+        const form = event.target;
+
+        form.querySelectorAll('.form-control').forEach(input => {
+            if (input.tagName.toLowerCase() !== 'textarea' && input.id !== 'address2'){
+                const small = input.nextElementSibling;
+                if (input.value.trim() === '') {
+                    input.style.borderColor = 'red';
+                    if (small) {
+                        small.style.display = 'block';
+                    }
+
+                    if (!firstInvalidField) {
+                        firstInvalidField = input;
+                    }
+
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '';
+                    if (small && small.tagName.toLowerCase() === 'small') {
+                        small.style.display = 'none';
+                    }
+                }
+            }
+        });
+
+        if (firstInvalidField) {
+            firstInvalidField.focus();
+        }
+
+        if (isValid) {
+            alert('Form submitted successfully!');
+            form.submit();
+        }
+    });
+
+</script>
