@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            //add button
+            let addButton = document.getElementById("add");
+            let addList = () => {
+                let li = document.createElement("li");
+                li.textContent = document.getElementById("input").value;
+                document.getElementById("list").appendChild(li);
+                document.getElementById("input").value = "";
+            };
+            addButton.addEventListener("click", addList);
+
+            //delete button
+            let deleteButton = document.getElementById("delete");
+            let deleteList = () => {
+                let list = document.getElementById("list");
+                if (list.childElementCount > 0) {
+                    list.removeChild(list.lastChild);
+                }
+                else { alert("지울 항목이 없습니다!"); }
+            };
+
+            deleteButton.addEventListener("click", deleteList);
+        });
+    </script>
+    <style>
+        #add {
+            background-color: #1f41af;
+            color: white;
+            border: 0;
+            text-shadow: 0 1px 0 rgb(116, 116, 116);
+        }
+
+        #delete {
+            background-color: #009e00;
+            color: white;
+            border: 0;
+            text-shadow: 0 1px 0 rgb(116, 116, 116);
+        }
+
+        body {
+            font-family: Arial;
+        }
+
+        button {
+            padding: 2px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dynamic Web Page</h1>
+    <input type="text" id="input" name="input" placeholder="apple, banana, kiwi">
+    <button class="addButton" id="add">추가</button>
+    <button id="delete">삭제</button>
+    <ul id="list">
+    </ul>
+    </div>
+</body>
+
+</html>
