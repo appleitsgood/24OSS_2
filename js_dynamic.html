@@ -10,6 +10,10 @@
             //add button
             let addButton = document.getElementById("add");
             let addList = () => {
+                if(document.getElementById("input").value == '') {
+                    alert("텍스트를 입력하세요!");
+                    return;
+                }
                 let li = document.createElement("li");
                 li.textContent = document.getElementById("input").value;
                 document.getElementById("list").appendChild(li);
